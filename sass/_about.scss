@@ -1,0 +1,87 @@
+.about {
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 5px;
+    // border: 5px solid $blue;
+    // border-radius: 4px;
+    padding: 20px 10px;
+    // background-color: white;
+
+
+    @include smallScreen {
+        display: flex;
+    }
+
+}
+
+.text-container {
+    padding: 20px 0 10px;
+    order: 2;
+
+    @include smallScreen {
+        width: 60%;
+    }
+
+
+    h2 {
+        padding-bottom: 10px;
+        color: $blue;
+    }
+
+    p {
+        text-align: justify;
+        letter-spacing: 0.5px;
+        padding-bottom: 20px;
+
+        @include tablets {
+            line-height: 24px;
+        }
+    }
+}
+
+.line {
+    width: 70%;
+    margin: 20px auto;
+    border-top: 2px solid $pink;
+    order: 1;
+
+    @include smallScreen {
+        border: none;
+        width: 0;
+        border-right: 2px solid $pink;
+    }
+}
+
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    opacity: 0.8;
+
+    @include smallScreen {
+        flex-direction: column;
+        width: 30%;
+    }
+
+    picture {
+        width: 47%;
+
+        @include tablets {
+            width: 22%;
+        }
+
+        @include smallScreen {
+            width: 90%;
+        }
+    }
+
+    .img-item {
+        margin: 10px 0;
+        border-radius: 10px;
+        border-radius: 4px;
+        padding: 3px;
+        background-color: $pink;
+        width: 100%;
+    }
+}

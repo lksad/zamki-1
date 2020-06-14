@@ -1,0 +1,43 @@
+ h2 {
+     @include sectionTitle;
+     padding-bottom: 20px;
+ }
+
+ .stat-lists {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     @include smallScreen {
+         flex-direction: row;
+     }
+
+
+
+     .stat-item {
+         width: 80%;
+         margin: 10px auto;
+         display: flex;
+         flex-direction: column;
+
+         justify-content: center;
+         text-align: center;
+         line-height: 30px;
+
+         @include smallScreen {
+             width: 30%;
+             max-width: 169px;
+         }
+
+
+         h3 {
+             color: $orange;
+         }
+
+         span {
+             font-size: 18px;
+         }
+
+     }
+ }
