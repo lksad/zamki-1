@@ -7,6 +7,24 @@
     grid-template-columns: auto 100px 1fr 100px auto;
     grid-template-rows: 1fr 1fr;
     padding: 5px 0;
+    background-image: url("../image/1.png");
+    background-size: contain;
+    position: relative;
+
+
+    .img-cover {
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
 
 }
 
@@ -16,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 
 
 
@@ -57,10 +76,17 @@ h1 {
     -webkit-text-stroke: 1px black;
     letter-spacing: 3px;
     font-size: 11vw;
+    z-index: 5;
 
     @include tablets {
         grid-column: 2/5;
         grid-row: 1/3;
         font-size: 8vw;
     }
+
+
+}
+
+.fb-like {
+    z-index: 5;
 }
